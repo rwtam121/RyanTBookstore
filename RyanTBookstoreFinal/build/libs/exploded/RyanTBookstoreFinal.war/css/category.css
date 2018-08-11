@@ -1,0 +1,139 @@
+/*
+Default font size from main.css is 20px, so for bookName changed to 22px
+
+ */
+
+
+
+/* horizontal flex of the left and right positions*/
+#totalFrame{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*     width: 35%; */
+#left{
+    margin: 20px;
+    width: 35%;
+}
+
+/*if we have several rows of 2 for books, use a flex by column to separate
+
+    display: flex;
+    flex-direction: column;
+        max-width: 1400px;
+
+        SO IT WAS PADDING-RIGHT: previously 90% preventing the flex-wrap from fully
+        working prior
+        Tried padding-right: 10% (see double flexing at 1500px
+        Max-width at 1400px didn't quite work;
+        perhaps make book blocks smaller
+*/
+#right{
+    padding-right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+/*gets the separation of each of the book items
+    flex-wrap: wrap;
+doesn't seem to work here well
+
+DO NOT USE MAX WIDTH 100 px
+    margin: 10px auto 20px;
+
+*/
+.bookItems {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto 20px;
+
+}
+
+
+/*the books and their text info are also separated horiz
+secret to generate distance between books is to introduce padding-right
+
+    display: flex;
+    justify-content: space-around;
+
+    previously     max-width: 475px;
+    try
+
+        padding-right: 40px;
+
+        the secret is to add padding to the bookset (we added 10px for this to work)
+
+*/
+.bookSet
+{
+
+    background: lightblue;
+    border: 5px solid lightgoldenrodyellow;
+    max-width: 400px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* set the top of the text to have some margin*/
+.bookInfo
+{
+    margin-top:4px;
+}
+
+.buttons
+{
+    margin-bottom: 4px;
+}
+
+
+/*text info separated on a column basis from buttons */
+.rightSide
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*other processing of book properties*/
+.bookName
+{
+    color: red;
+    font-size: 22px;
+}
+
+.cartButton, .readNow, .addToCartButton{
+    background: lightyellow;
+    border: 4px solid lightcoral;
+    border-radius: 8px;
+    padding: 2px;
+    width: 160px;
+    margin-bottom: 10px;
+    color: blue;
+}
+
+.readNow{
+    margin-top: 5px;
+}
+
+.addToCartButton{
+    width: 170px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#selectedCategory{
+    background-color: lightpink;
+}
+
+.addToCartButton:hover{
+    color: purple;
+}

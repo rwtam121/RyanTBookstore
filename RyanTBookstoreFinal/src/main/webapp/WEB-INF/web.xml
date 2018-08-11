@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <context-param>
+        <description>path to site images</description>
+        <param-name>siteImages</param-name>
+        <param-value>images/site/</param-value>
+    </context-param>
+    <context-param>
+        <description>path to book images</description>
+        <param-name>bookImages</param-name>
+        <param-value>images/books/</param-value>
+    </context-param>
+</web-app>
+
+        <!--
+        Finally, you should be able to replace the context parameters (for site images and book images)
+        from the web.xml deployment descriptor with the constants from the view-model.
+
+
+        thought we can't access java variables in a resource file
+
+        <param-name>siteImages</param-name>
+        <param-value>images/site/</param-value>
+
+        <param-name>bookImages</param-name>
+        <param-value>images/books/</param-value>
+        -->

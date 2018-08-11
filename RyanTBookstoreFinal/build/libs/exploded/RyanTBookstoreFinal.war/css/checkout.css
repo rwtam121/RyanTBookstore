@@ -1,0 +1,111 @@
+/*
+I created a checkout.css to implement flexing
+ */
+
+/*
+Checkout main partitions the form error up top and the main form.
+flex may not be needed (same effect)
+    justify-content: center;
+
+        float: left;
+    clear: left;
+    width: 250px;
+
+ */
+#checkoutMain{
+
+    display: inline-block;
+
+    text-align: right;
+    margin: auto;
+
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    background: lightblue;
+    border: 4px solid pink;
+    padding: 20px;
+
+}
+
+
+/*
+Get spacing between form fields and also between the errors and the top form field
+     margin-left: 20%;
+
+
+*/
+.textField{
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+
+/*
+Add spacing on top of expiration date items (also does it for submit button)*/
+.selectMenu{
+    margin-top: 20px;
+}
+
+/*
+Get spacing between form box and the total sum below
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+*/
+#checkoutFormBox{
+    margin-bottom: 20px;
+}
+
+#checkoutInfoText{
+    margin-top: 20px;
+    background-color: yellow;
+}
+
+#checkoutFormErrors{
+    margin-top: 20px;
+}
+
+#checkoutName{
+    font-size: 35px;
+}
+
+#checkoutInfo{
+    margin-top: 20px;
+}
+
+#checkoutFormAndInfo, #checkoutFormErrors {
+    margin-left: 100px;
+    alignment: left;
+}
+
+
+/*input[name="name"]{*/
+
+/*}*/
+
+
+
+
+/*
+
+input[name="name"],input[name="address"],input[name="phone"],input[name="email"],input[name="ccNumber"] {
+    margin-left: 100px;
+}
+
+TRYING TO ALIGN ITEMS
+input[class="textField"] {*/
+    /*width: 30%;*/
+    /*!* positions the label text beside the input *!*/
+    /*align: left;*/
+/*}*/
+
+/*input[class="textField"] {*/
+    /*margin-left:100px;*/
+/*}*/

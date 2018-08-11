@@ -1,0 +1,57 @@
+/*
+This is the block comment format in css.
+
+added to body:
+text-align: center;
+margin: 20px;
+  changed  color: black;  #111111
+
+background
+PREVIOUSLY
+background: #b5d8f4; a blue color
+
+links are blue because of input[type=submit]
+
+previously body had
+    font: 1em normal Verdana, Tahoma, sans-serif;
+        color: #111111;
+
+        main bkgrd used to be white
+        tested with     background: lightblue;
+
+
+
+*/
+
+body {
+    font-family: "Copperplate Gothic","Copperplate Gothic Light","Copperplate Gothic Bold";
+    font-weight: bold;
+    color: darkblue;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+
+
+}
+
+main {
+    background: lightgoldenrodyellow;
+    /* stack header-section-footer on all pages ; flex direction NEEDS to be in column because of that*/
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+a,
+a:visited,
+input[type=submit] {
+    color: blue;
+}
+
+a:hover,
+a:active,
+input[type=submit]:hover,
+ul.buttons a:hover{
+    color: purple;
+}

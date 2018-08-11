@@ -1,0 +1,196 @@
+/*
+
+All we did here is make some flexbox
+containers, and gave some width to
+the left and right header and footer
+divs. A few lines of code made a huge
+difference in the appearance.
+
+
+previous background: black; now background: #93d355; for header now green
+
+added
+display: flex;
+justify-content: space-between;
+space between means if have three elements, one is all the way to left, other all way to right, other in middle
+
+#leftHeader { width: 150px; }
+#rightHeader { width: 150px; }
+
+annotated document says that the header has to be 150px
+in header.jsp we defined the left, mid and right headers as well.
+That is why we took the element with a specific id (leftHeader, rightHeader, in css we put a hashtag before it to adjust
+its properties). This puts mid header right in the middle so it is centered (a trick)
+
+I also put 10px padding ON TOP of the logo and also on the logo text. This worked, it is responsive!
+
+We also want to style the search box. Search form itself will become a flex container. See how many little magnifying glass
+as the searchIcon is above the search box in the horiz alignment? The flex box of the search form (which encompassesthe box
+and icon) will align them. We say display: flex,and by default this flexbox is in a row.
+
+Want searchbox to be 300X35 pixels. The border for the searchbox establishes the rounded corners (ie 3 px) by setting the border radius
+on the border.
+
+Need to change the alignment in the search form because it contains the search box and search icon. To make sure they are aligned, since
+the magnifying glass icon looks stretched. So align items-center centers the items, so not stretched vertically.
+
+Also, justify-content needs to be centered for flexbox. Adding padding to the whole form as well at the left.
+
+Making the line height the same as the height gets the text centered for the login button. The letter G now looks nice and centered within the circle
+it is embedded in.
+
+For all cart items, we want them to be a flexbox displayed along its center
+NEED A FLEX DIRECTION for the right header because default is by rows, we want to flex by columns so it flares out vertically
+
+Dr K tried moving the item number
+    position: relative; for cartIcon
+
+    and cartCount:     position: absolute;
+    top: -10px;
+    left: 15px;
+
+    However, books with auto left and right margin fell into place (are now centered)
+
+Not doing anything with mid header yet, just want to keep it there
+
+Change header formatting:
+prev bkgrd:     background: #93d355;
+    color: white;
+
+        display: flex;
+    flex-direction: column;
+
+
+    these were right header properties I took out:
+        width: 200px;
+    border: black 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    no need for login button:
+
+#loginButton{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+}
+
+itemsArray once had these
+    display: flex;
+    align-items: center;
+
+    justify-content: space-evenly;
+
+    cartand Login
+        align-items: center;
+
+        leftHeader 150px; resizing might be tough
+
+took this out
+searchForm
+    padding-left: 650px;
+
+    leftHeader= width 150px
+
+    header background     background: white;
+
+
+*/
+
+/*      height: 150px;    */
+header {
+    background: white;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/*     width: 11%;*/
+#leftHeader {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+
+
+#logo {
+    padding-top: 5px;
+}
+
+#midHeader {
+    display: flex;
+    align-items: center;
+}
+
+#logoText {
+    padding-top: 4px;
+}
+
+#searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchBox {
+    width: 300px;
+    height: 35px;
+    border: 3px gray solid;
+    border-radius: 8px;
+}
+
+#searchIcon {
+    border: 2px gray solid;
+    border-radius: 8px;
+    margin-left: 4px;
+
+}
+
+
+#cartAndLogin{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+#cartIcon{
+    border: blue 4px solid;
+    position: relative;
+    width: 150px;
+}
+
+#cartCount{
+    font-weight: bold;
+    color: orangered;
+    position: absolute;
+    font-size: 35px;
+    margin-left: 15px;
+    margin-top: -10px;
+}
+
+#itemsTag{
+    padding-left: 30px;
+}
+
+
+#rightHeader {
+    margin-left: 50px;
+    padding-top: 30px;
+}
+
+#categoryDropdown{
+    border: black 2px solid;
+}
+
+
+
+

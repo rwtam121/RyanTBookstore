@@ -1,0 +1,81 @@
+/*
+previous background: black; now background: #93d355; for header now green
+footer needs to be 50px
+
+lay out the footer by using flex boxes,
+did space between for footer so icons on right side, contact directly at middle
+
+150px for left and right footer ensures both items are at the center
+align items center (flex)--so items are laid out at the center
+
+I took out the rightFooter width is 150 px so we aren't constrained widthwise
+    width: 150px;
+
+    Dr K made the footer height 50 px but i think it is arbitrary, can be bigger
+    (60px was stated in the powerpt)
+
+    All text placed in the footer has a color of yellow
+
+    considered adding
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    to topIcons
+    much like in header.jsp searchForm had searchBox and searchIcon with a flex layout
+
+    I made the contact icons a flexbox, to group them evenly:
+        display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    top-icons    padding-bottom: 2px; (took this away for now)
+
+*/
+footer {
+    height: 100px;
+    background: rgb(228, 99, 71);
+    color: yellow;
+    font-family: "Copperplate Gothic","Copperplate Gothic Light","Copperplate Gothic Bold";
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 8px solid gold;
+}
+
+#leftFooter {
+    width: 460px;
+    display: flex;
+    padding-left: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#motto{
+    font-family: "Harlow Solid Italic", "Harlow Solid","Edwardian Script ITC";
+    font-size: 22px;
+}
+
+#midFooter { width: 450px; }
+
+#topIcons {
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#bottomText{
+}
+
+#rightFooter {
+    padding-right: 25px;
+}
+
+#contactIcons{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

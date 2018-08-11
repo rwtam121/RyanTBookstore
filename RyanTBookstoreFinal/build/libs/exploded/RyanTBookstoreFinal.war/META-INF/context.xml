@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/">
+    <Resource name="jdbc/RyanTBookstore" auth="Container" type="javax.sql.DataSource"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+              username="rwtam121" password="6762" driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://cs5244.cs.vt.edu:3306/RyanTBookstoreDB"/>
+</Context>

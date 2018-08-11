@@ -1,0 +1,247 @@
+
+/* Styles only used on the cart, checkout, and confirm pages
+
+
+Ryan comments:
+https://stackoverflow.com/questions/4459821/css-selector-what-is-it
+
+article > div
+your rules will apply only to those divs that have a class of "article"
+ since those divs are direct descendants (immediate children) of elements with class "article"
+
+*/
+
+
+
+h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+article {
+    /* allows the inner <div> to be centered via auto margins */
+    display: flex;
+}
+
+article > div {
+    margin: 0 auto;
+    min-width: 30em;
+    max-width: 85%;
+}
+
+.table.summary {
+    max-width: 30em;
+}
+
+
+
+/* cart page */
+
+.cart .table > div:first-child > span {
+    padding-top: 0;
+}
+
+.cart .table > div:not(:first-child):last-child > span {
+    /* this selector won't affect the last-child if it's also the first-child */
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.cart .table > div > .boxart {
+    width: 62px;    /* match the boxart img width */
+}
+
+.cart .table > div > .title {
+    /* auto-expands to fill the remainder of the table width requirement with table-layout: auto */
+    padding-left: 1em;
+    font-size: 1.2em;
+}
+
+.cart .table > div > .quantity,
+.cart .table > div > .price {
+    text-align: right;
+    width: 5em;
+}
+
+/*     margin-bottom: 5px;
+
+.quantity{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto 20px;
+}
+*/
+.cart .table > div > .quantity input {
+    padding: 0.2em;
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid #888;
+}
+
+.cart .table > div.subtotal .price {
+    font-weight: 700;
+}
+
+.scroll
+{
+    margin-bottom: 4px;
+}
+
+
+
+/* overrides from other CSS */
+
+.content ul.buttons {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.content ul.buttons li {
+    margin: 0 0.5em;
+}
+
+
+
+
+/**
+    Main (common) CSS for the entire Bookstore site.
+ */
+
+body {
+    font: 1em normal Verdana, Tahoma, sans-serif;
+    color: #111111;
+    box-sizing: border-box;
+}
+
+a,
+a:visited,
+input[type=submit] {
+    color: #006699;
+    box-sizing: border-box;
+}
+
+a:hover,
+a:active,
+input[type=submit]:hover,
+ul.buttons a:hover{
+    color: #00aacc;
+}
+
+
+
+ul.horizontal li {
+    /* shrink-wraps the li and allows wrapping within their container */
+    display: inline-block;
+}
+
+.content ul.buttons {
+    margin: 1em auto 0;
+}
+
+.content ul.buttons li {
+    margin-bottom: 0.5em;
+}
+
+.content ul.buttons li a {
+    border: 1px solid #0088bb;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    display: block;
+}
+
+ul.buttons li a:not(.selected):hover {
+    background-color: #00aacc;
+    color: #fff;
+    border-color: #0088bb;
+}
+
+ul.buttons li a.selected {
+    background-color: #0088bb;
+    color: #fff;
+    cursor: default;
+}
+
+ul.buttons li a:active {
+    background-color: #006699;
+    color: #ddd;
+}
+
+
+
+/* table displays */
+
+.table {
+    display: table;
+    width: 100%;
+
+    /* if you can define all the column widths statically, used table-layout: fixed for better rendering performance */
+    table-layout: auto;
+
+    /* you can also define a max-width here if you like
+
+    no need for tr:nth-child(even) {background-color: #f2f2f2;}
+    because we mimicked a table row; we can use table tags and the above later on to get the striped colors
+    */
+}
+
+
+
+.table > div {
+    display: table-row;
+}
+
+.table > div > span {
+    display: table-cell;
+    padding: 1em;
+    border-bottom: 1px solid #aaa;
+    vertical-align: middle;
+}
+
+.tableHeading > span {
+    font-weight: 700;
+}
+
+.tableRow:not(.tableHeading):first-child > span {
+    padding-bottom: 0;
+}
+
+.tableRow:not(.tableHeading):first-child > span,
+.tableRow:last-child > span {
+    border: 0;
+}
+
+.tableRow > span:last-child {
+    text-align: right;
+    font-weight: 700;
+}
+
+/* an attempt to get rid of the button color*/
+input[value="Clear Cart"] {
+    background-color: lightgoldenrodyellow;
+    border: lightgoldenrodyellow;
+}
+
+
+/*input[value="Clear Cart"] :not(.selected):hover {*/
+    /*background-color: #00aacc;*/
+    /*color: orange;*/
+    /*border-color: #0088bb;*/
+/*}*/
+
+/*input[value="Clear Cart"].selected {*/
+    /*border-color: #0088bb;*/
+    /*color: #fff;*/
+    /*cursor: default;*/
+/*}*/
+
+
+/*input[type=submit] {*/
+    /*border: 0px solid #0088bb;*/
+    /*padding: 0.2em;*/
+    /*border-radius: 0.2em;*/
+    /*display: block;*/
+/*}*/
